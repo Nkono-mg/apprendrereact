@@ -5,7 +5,7 @@ const Cars = (props) => {
     const colorInfo = props.color ? (<li>Couleur: {props.color}</li>) : (<li>Couleur: Néant</li>)
     if(props.children){
         return (
-            <div>
+            <div style = {{backgroundColor: 'pink',width:'400px', padding: '10px', margin: '5px auto'}} className="cars">
             <ul>
                  <li>Marque: {props.children}</li>
                   { colorInfo }
@@ -13,10 +13,8 @@ const Cars = (props) => {
         </div>
         );
     }else{
-        return <p>Pas d'autre voiture</p>
+        return <p style = {{backgroundColor: 'pink',width:'400px', padding: '10px', margin: '5px auto'}}>Pas d'autre voiture</p>
     }
-    
-   
 };
 
 export default Cars;

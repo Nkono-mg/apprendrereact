@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import Cars from './Cars';
+import Cars from './Cars'; 
 
-class Mycars extends Component {
+class Mycars extends Component { 
+
+    addStyle = (e)=>{
+        if(e.target.classList.contains('styled')){
+            e.target.classList.remove('styled');
+        }else{
+            e.target.classList.add('styled');
+        }
+    }
     render() {
         return (
-            <div>
-                <h2>{this.props.title}</h2>
+            <div className="mycars">
+                <h1 onMouseOver={this.addStyle}>{this.props.title}</h1>
                 <Cars color="red">Ford</Cars>
                 <Cars color="">Mercedes</Cars>
                 <Cars color="Green"></Cars>
@@ -13,5 +21,4 @@ class Mycars extends Component {
         );
     }
 }
-
 export default Mycars;
