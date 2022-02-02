@@ -28,7 +28,7 @@ class App extends Component {
   getViaInput = (e) => {
     e.preventDefault();
     this.setState({
-      title: this.inputNode.value,
+      title: this.inputName.value,
     });
   };
   render() {
@@ -49,7 +49,7 @@ class App extends Component {
         <input
           type="text"
           name="titre"
-          ref={(node) => (this.inputNode = node)}
+          ref={(name) => (this.inputName = name)}
         />
         <button onClick={this.getViaInput}>getVia Input</button>
       </div>
