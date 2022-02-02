@@ -3,6 +3,7 @@ import Hello from "./componsant/Hello";
 import Mycars from "./componsant/Mycars";
 
 import React, { Component } from "react";
+import Maman from "./componsant/Maman";
 
 class App extends Component {
   changeTitle = () => {
@@ -45,6 +46,8 @@ class App extends Component {
           />
           <button onClick={this.getViaInput}>getVia Input</button>
         </div>  
+        <hr />
+       <Maman />
       </div>
     );
   }
