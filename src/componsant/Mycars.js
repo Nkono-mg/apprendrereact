@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,Fragment } from "react";
 import Cars from "./Cars";
 
 class Mycars extends Component {
@@ -37,7 +37,7 @@ class Mycars extends Component {
   render() {
     const yearNow = new Date().getFullYear();
     return (
-      <div
+      <Fragment
         className="mycars"
         style={{ width: "400px", padding: "10px", margin: "5px auto" }}
       >
@@ -45,17 +45,17 @@ class Mycars extends Component {
         <button onClick={this.addTenYear}>+10 ans</button>
         {this.state.voitures.map((voiture, index) => {
           return (
-            <div key={index}>
+            <Fragment key={index}> 
               <Cars
                 name={voiture.name}
                 color={voiture.color}
                 year={yearNow - voiture.annee + ' ans'}
               />
-            </div>
+            </Fragment>
           );
         })}
-      </div>
+      </Fragment>
     );
   }
 }
-export default Mycars;
+ export default Mycars;

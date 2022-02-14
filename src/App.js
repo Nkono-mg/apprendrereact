@@ -1,9 +1,10 @@
-import "./App.css";
-import Hello from "./componsant/Hello";
-import Mycars from "./componsant/Mycars";
-
 import React, { Component } from "react";
-import Maman from "./componsant/Maman";
+import "./App.css";
+ import Hello from "./componsant/Hello";
+import Mycars from "./componsant/Mycars";
+import Maman from "./componsant/Maman"; 
+import Form from "./componsant/Form";
+import LifeCycle from "./componsant/LifeCycle";
 
 class App extends Component {
   changeTitle = () => {
@@ -31,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Hello />
+         <Hello />
         <hr />
         <Mycars titre={this.getViaInput}/>
        <div>
@@ -48,6 +49,10 @@ class App extends Component {
         </div>  
         <hr />
        <Maman />
+       <hr />
+       <Form />
+       <hr />
+       <LifeCycle />
       </div>
     );
   }

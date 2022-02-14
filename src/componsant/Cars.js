@@ -7,7 +7,7 @@ const Cars = (props) => {
             <div style = {{backgroundColor: 'pink',width:'400px', padding: '10px', margin: '5px auto'}} className="cars">
             <ul>
                  <li>Marque: {props.name}</li>
-                 <li>Age: {props.year}</li>
+                 <li>Age: {props.year}</li> 
                   { colorInfo }
             </ul>
         </div>
